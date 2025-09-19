@@ -1,0 +1,36 @@
+body {
+ 
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 250px 100px;
+  width: 700px;
+  margin: 20px auto;
+}
+.adnan{
+display: grid;
+grid-template-columns: 1fr 2fr;
+grid-template-rows: 2fr 4fr 1fr;
+background-color: black;
+margin: 19px;
+}
+
+.bar {
+  height: 100%;
+}
+
+.nosignal{
+color: aliceblue;
+font-size: 25px;
+text-align: center;
+}
+
+.grey { background: lightgrey; }
+.yellow { background: yellow; }
+.cyan { background: lightblue; }
+.green { background: lightgreen; }
+.purple { background: purple; }
+.red { background: red; }
+.blue{background-color: blue;}
