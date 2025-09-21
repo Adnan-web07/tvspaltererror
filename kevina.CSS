@@ -1,46 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
- 
-}
-
-
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: 250px; 
-  width: 700px;
-  margin: 20px auto;
-}
-
-.Error {
-  display: grid;
-  grid-column: 1 / -1 ;
-  grid-row: 1;
-  background: black;
-  margin: 20px auto;
-  max-width: 700px;
-  color: white;
-  text-align: center;
-  font-size: 36px;
-  font-weight: bold;
+  background: #000;
+  font-family: Arial, sans-serif;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
+.test-pattern {
+  width: 80vw;
+  max-width: 800px;
+  height: 60vh;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #333;
+}
+
+/* Top colored bars */
+.top-bars {
+  display: flex;
+  height: 40%;
+  width: 100%;
 }
 
 .bar {
+  flex: 1;
   height: 100%;
 }
 
-.nosignal{
-color: aliceblue;
-font-size: 25px;
-text-align: center;
+/* No Signal section */
+.no-signal-section {
+  height: 35%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.grey { background: lightgrey; }
-.yellow { background: yellow; }
-.cyan { background: lightblue; }
-.green { background: lightgreen; }
-.purple { background: purple; }
-.red { background: red; }
-.blue{background-color: blue;}
+.no-signal-text {
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: bold;
+  text-align: center;
+  line-height: 0.9;
+  letter-spacing: 2px;
+}
+
+/* Bottom colored blocks */
+.bottom-bars {
+  display: flex;
+  height: 25%;
+  width: 100%;
+}
+
+.bottom-block {
+  flex: 1;
+  height: 100%;
+}
+
+/* Color definitions */
+.grey { background: #c0c0c0; }
+.yellow { background: #ffff00; }
+.cyan { background: #00ffff; }
+.green { background: #00ff00; }
+.magenta { background: #ff00ff; }
+.red { background: #ff0000; }
+.blue { background: #0000ff; }
+.white { background: #ffffff; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .test-pattern {
+    width: 95vw;
+    height: 70vh;
+  }
+  
+  .no-signal-text {
+    font-size: 2.5rem;
+  }
+}
