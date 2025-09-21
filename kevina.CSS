@@ -2,19 +2,29 @@ body {
  
 }
 
+
+
 .container {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: 250px 100px;
+  grid-template-rows: 250px; 
   width: 700px;
   margin: 20px auto;
 }
-.adnan{
-display: grid;
-grid-template-columns: 1fr 2fr;
-grid-template-rows: 2fr 4fr 1fr;
-background-color: black;
-margin: 19px;
+
+.Error {
+  display: grid;
+  grid-column: 1 / -1 ;
+  grid-row: 1;
+  background: black;
+  margin: 20px auto;
+  max-width: 700px;
+  color: white;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  justify-content: center;
+
 }
 
 .bar {
