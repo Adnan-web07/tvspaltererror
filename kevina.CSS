@@ -1,9 +1,11 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: #ffffff;
+  background: #000;
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
@@ -11,20 +13,21 @@ body {
   min-height: 100vh;
 }
 
-.testpattern {
-  width: 600px;
-  max-width: 700px;
-  height: 700px;
+.test-pattern {
+  width: 80vw;
+  max-width: 800px;
+  height: 60vh;
   max-height: 600px;
   display: flex;
   flex-direction: column;
+
 }
 
-/* Top colored bars  */
-.topbars {
+/* Top colored bars */
+.top-bars {
   display: flex;
-  height: 44%;
-  width: 110%;
+  height: 40%;
+  width: 100%;
 }
 
 .bar {
@@ -32,10 +35,9 @@ body {
   height: 100%;
 }
 
-
-.nosignalsection {
-  height: 32%;
-  width: 110%;
+/* No Signal section */
+.no-signal-section {
+  height: 35%;
   background: #000;
   display: flex;
   justify-content: center;
@@ -43,21 +45,22 @@ body {
   position: relative;
 }
 
-.nosignaltext {
+.no-signal-text {
   color: #fff;
-  font-size: 60px;
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: bold;
   text-align: center;
+  line-height: 0.9;
+  letter-spacing: 2px;
 }
 
-/* Bottom section with two rows */
+/* Middlebottm colored blocks */
 .MiddleBottombars{
   display: flex;
-  height: 13%;
+  height: 25%;
   width: 100%;
 }
 
-/* Narrow bars row (top of bottom section) */
 .Middlebottomblock {
   flex: 1;
   height: 100%;
@@ -69,14 +72,10 @@ body {
   width: 110%;
 }
 
-/* Large blocks row (bottom of bottom section) */
 .bottomblock {
   flex: 1;
   height: 100%;
-  width: 100%;
 }
-
-
 
 .grey { background: #c0c0c0; }
 .yellow { background: #ffff00; }
@@ -86,7 +85,15 @@ body {
 .red { background: #ff0000; }
 .blue { background: #0000ff; }
 .white { background: #ffffff; }
-.black {background: #000; }
 
-
-
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .test-pattern {
+    width: 95vw;
+    height: 70vh;
+  }
+  
+  .no-signal-text {
+    font-size: 2.5rem;
+  }
+}
